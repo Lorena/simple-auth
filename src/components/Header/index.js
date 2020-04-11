@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import Status from "../Status"
+import { isLoggedIn } from "../../utils/auth"
+
 
 import styles from "./header.module.css"
 
@@ -12,21 +14,18 @@ const Header = () => (
           to="/"
           className={`${styles[`header__link`]} ${
             styles[`header__link--home`]
-          }`}
-        >
+          }`}>
           Lorena | Intranet
         </Link>
       </h1>
-      <nav role="main" className={styles[`header__nav`]}>
-        <Link to="/app/home" className={styles[`header__link`]}>
-          Home
-        </Link>
-        <Link to="/app/about" className={styles[`header__link`]}>
-          About
-        </Link>
-        <Link to="/app/profile" className={styles[`header__link`]}>
-          Profile
-        </Link>
+      <nav role="main" className={styles[`header__nav`]}>  
+        {isLoggedIn() &&
+          <div>
+            <Link to="/app/home" className={styles[`header__link`]}>Home</Link>
+            <Link to="/app/about" className={styles[`header__link`]}>About</Link>
+            <Link to="/app/profile" className={styles[`header__link`]}>Profile</Link>
+          </div>
+        }
       </nav>
     </div>
     <Status />
