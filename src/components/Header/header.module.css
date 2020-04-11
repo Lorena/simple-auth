@@ -7,8 +7,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: 0 auto;
-  max-width: 640px;
-  padding: 1rem 0;
+  max-width: 1160px;
+  background-color: magenta;
+  height: 60px;
 }
 
 .header__heading {
@@ -19,7 +20,11 @@
 .header__nav {
   font-size: 1.25rem;
   margin-top: 0;
-  text-align: right;
+  text-align: left;
+  margin-left: 260px;
+  background-color: mediumseagreen;
+  max-width: 1160px;
+  height: 40px;
 }
 
 .header__link {

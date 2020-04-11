@@ -18,7 +18,9 @@ const Header = () => (
           Lorena | Intranet
         </Link>
       </h1>
-      <nav role="main" className={styles[`header__nav`]}>  
+      <Status /> 
+    </div>
+    <nav role="main" className={styles[`header__nav`]}>  
         {isLoggedIn() &&
           <div>
             <Link to="/app/home" className={styles[`header__link`]}>Home</Link>
@@ -27,8 +29,6 @@ const Header = () => (
           </div>
         }
       </nav>
-    </div>
-    <Status />
   </header>
 )
 
