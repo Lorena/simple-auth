@@ -8,7 +8,7 @@ import "./global.css"
 import styles from "./main.module.css"
 
 const Layout = ({ children }) => (
-  <div>
+  <div className={styles.wrap_header_main}>
     <Helmet title="Simple Authentication With Gatsby" />
     <Header />
     <main className={styles.main}>{children}</main>

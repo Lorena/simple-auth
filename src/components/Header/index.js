@@ -12,10 +12,9 @@ const Header = () => (
       <h1 className={styles[`header__heading`]}>
         <Link
           to="/"
-          className={`${styles[`header__link`]} ${
-            styles[`header__link--home`]
-          }`}>
-          Lorena | Intranet
+          >
+          <img ng-src="https://lh3.googleusercontent.com/pUwhwsBUkHUa0-8N-iIuWxNL6cqOqXk2nwmuLPDcPv6COGL_62iVMYKubtzc9C_LB4gXbZmeetPDDqypH48c=s512" alt="Intranet - ThoughtWorks" src="https://lh3.googleusercontent.com/pUwhwsBUkHUa0-8N-iIuWxNL6cqOqXk2nwmuLPDcPv6COGL_62iVMYKubtzc9C_LB4gXbZmeetPDDqypH48c=s512"></img>
+          
         </Link>
       </h1>
       <Status /> 
@@ -23,9 +22,9 @@ const Header = () => (
     <nav role="main" className={styles[`header__nav`]}>  
         {isLoggedIn() &&
           <div>
-            <Link to="/app/home" className={styles[`header__link`]}>Home</Link>
-            <Link to="/app/about" className={styles[`header__link`]}>About</Link>
-            <Link to="/app/profile" className={styles[`header__link`]}>Profile</Link>
+            <Link to="/app/home" className={styles[`header__link__home__menu`]}>Home</Link>
+            <Link to="/app/about" className={styles[`header__link__menu`]}>About</Link>
+            <Link to="/app/profile" className={styles[`header__link__menu`]}>Profile</Link>
           </div>
         }
       </nav>
