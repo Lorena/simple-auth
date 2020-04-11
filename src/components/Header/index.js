@@ -18,7 +18,7 @@ const Header = () => (
         </Link>
       </h1>
       <nav role="main" className={styles[`header__nav`]}>
-        <Link to="/" className={styles[`header__link`]}>
+        <Link to="/app/home" className={styles[`header__link`]}>
           Home
         </Link>
         <Link to="/app/profile" className={styles[`header__link`]}>

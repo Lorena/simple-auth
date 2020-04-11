@@ -12,8 +12,8 @@ export default ({ handleSubmit, handleUpdate }) => (
     }}
   >
     <p className={styles[`form__instructions`]}>
-      For this demo, please log in with the username <code>gatsby</code> and the
-      password <code>demo</code>.
+      For this demo, please log in with the username <code>admin</code> and the
+      password <code>123456</code>.
     </p>
     <label className={styles[`form__label`]}>
       Username

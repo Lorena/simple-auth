@@ -10,7 +10,7 @@ const setUser = user => (window.localStorage.gatsbyUser = JSON.stringify(user))
 export const handleLogin = ({ username, password }) => {
   if (!isBrowser) return false
 
-  if (username === `gatsby` && password === `demo`) {
+  if (username === `admin` && password === `123456`) {
     console.log(`Credentials match! Setting the active user.`)
     return setUser({
       name: `Jim`,
