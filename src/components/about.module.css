@@ -1,0 +1,22 @@
+.about__highlight_main_content {
+  display: flex;
+  font-size: 28px;
+  height: 456px;
+
+}
+
+.about__highlight {
+  font-size: 28px;
+  width: 525px;
+  height: 122px;
+
+}
+
+.about__main_content{
+  margin: 0;
+  width: 552px;
+  height: 456px;
+  flex-direction:column;
+  font-size: 18px;
+
+}
