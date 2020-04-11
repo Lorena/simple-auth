@@ -14,18 +14,18 @@ const Header = () => (
             styles[`header__link--home`]
           }`}
         >
-          Gatsby Auth
+          Lorena | Intranet
         </Link>
       </h1>
       <nav role="main" className={styles[`header__nav`]}>
         <Link to="/app/home" className={styles[`header__link`]}>
           Home
         </Link>
+        <Link to="/app/about" className={styles[`header__link`]}>
+          About
+        </Link>
         <Link to="/app/profile" className={styles[`header__link`]}>
           Profile
-        </Link>
-        <Link to="/app/details" className={styles[`header__link`]}>
-          Details
         </Link>
       </nav>
     </div>

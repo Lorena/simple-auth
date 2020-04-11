@@ -2,7 +2,7 @@ import React from "react"
 import View from "./View"
 import { getCurrentUser } from "../utils/auth"
 
-const Details = () => {
+const About = () => {
   const { name, legalName, email } = getCurrentUser()
 
   return (
@@ -20,4 +20,4 @@ const Details = () => {
   )
 }
 
-export default Details
+export default About
