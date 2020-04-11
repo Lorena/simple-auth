@@ -18,18 +18,21 @@ export default () => {
 
     details = (
       <p className={styles[`status__text`]}>
-        Logged in as {name} ({email}
-        )!
+
+        <Link to="/app/profile" className={styles[`status__link__user`]}>{name} - {email} </Link>
+        <br/>
         {` `}
         <a
           href="/"
+          className={styles[`status__logout`]}
           onClick={event => {
             event.preventDefault()
             logout(() => navigate(`/app/login`))
           }}
         >
-          log out
+          Log Out
         </a>
+
       </p>
     )
   }

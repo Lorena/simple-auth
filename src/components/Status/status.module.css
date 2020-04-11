@@ -1,5 +1,4 @@
 .status {
-  background: lightgrey;
   font-size: 87.5%;
   padding: 0.25rem;
 }
@@ -8,4 +7,15 @@
   margin: 0 auto;
   max-width: 640px;
   text-align: right;
+}
+
+.status__link__user {
+  text-decoration: none;
+  color: dimgray;
+}
+
+.status__logout {
+  text-decoration: none;
+  color: brown;
+  font-weight: bold;
 }

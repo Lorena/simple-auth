@@ -23,8 +23,11 @@ const Header = () => (
         {isLoggedIn() &&
           <div>
             <Link to="/app/home" className={styles[`header__link__home__menu`]}>Home</Link>
+            <Link to="/app/clients" className={styles[`header__link__menu`]}>Clients</Link>
+            <Link to="/app/demand" className={styles[`header__link__menu`]}>Demand</Link>
+            <Link to="/app/policies" className={styles[`header__link__menu`]}>Policies</Link>
+            <Link to="/app/news" className={styles[`header__link__menu`]}>News</Link>
             <Link to="/app/about" className={styles[`header__link__menu`]}>About</Link>
-            <Link to="/app/profile" className={styles[`header__link__menu`]}>Profile</Link>
           </div>
         }
       </nav>
