@@ -8,12 +8,14 @@ export default ({ handleSubmit, handleUpdate }) => (
     method="post"
     onSubmit={event => {
       handleSubmit(event)
-      navigate(`/app/profile`)
+      navigate(`/app/home`)
     }}
   >
     <p className={styles[`form__instructions`]}>
-      For this demo, please log in with the username <code>admin</code> and the
-      password <code>123456</code>.
+      For this demo, please log in with the username <code>jim</code> and the
+      password <code>123456</code>. <br /> Or log in with the username <code>mee</code> and the
+      password <code>654321</code> to have the publish experience. <br /> And if do you want to have admin experencie
+      log in with the username <code>admin</code> and the password <code>lalala</code>
     </p>
     <label className={styles[`form__label`]}>
       Username

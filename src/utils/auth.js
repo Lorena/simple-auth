@@ -10,16 +10,53 @@ const setUser = user => (window.localStorage.gatsbyUser = JSON.stringify(user))
 export const handleLogin = ({ username, password }) => {
   if (!isBrowser) return false
 
-  if (username === `admin` && password === `123456`) {
+  if (username === `jim` && password === `123456`) {
     console.log(`Credentials match! Setting the active user.`)
     return setUser({
       name: `Jim`,
       legalName: `James K. User`,
       email: `jim@example.org`,
+      role: `all`,
+    })
+  }
+
+  if (username === `mee` && password === `654321`) {
+    console.log(`Credentials match! Setting the active user.`)
+    return setUser({
+      name: `Mee`,
+      legalName: `Meenakshi K. User`,
+      email: `meenakshi@example.com`,
+      role: `publisher`,
+    })
+  }
+
+  if (username === `admin` && password === `lalala`) {
+    console.log(`Credentials match! Setting the active user.`)
+    return setUser({
+      name: `Administer`,
+      legalName: `Admin K. User`,
+      email: `admin@example.com`,
+      role: `admin`,
     })
   }
 
   return false
+}
+
+export const isAdmin = () => {
+  if (!isBrowser) return false
+
+  const user = getUser()
+
+  return user.role == `admin`
+}
+
+export const isPublisher = () => {
+  if (!isBrowser) return false
+
+  const user = getUser()
+
+  return user.role == `publisher`
 }
 
 export const isLoggedIn = () => {
