@@ -1,7 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 import Status from "../Status"
-import { isLoggedIn } from "../../utils/auth"
+import { isLoggedIn, isPublisher, isAdmin } from "../../utils/auth"
+import logo from './logo.png'
+import adminicon from './admin.png'
+import publiscontent from './publish-content.png'
 
 
 import styles from "./header.module.css"
@@ -13,10 +16,24 @@ const Header = () => (
         <Link
           to="/"
           >
-          <img ng-src="https://lh3.googleusercontent.com/pUwhwsBUkHUa0-8N-iIuWxNL6cqOqXk2nwmuLPDcPv6COGL_62iVMYKubtzc9C_LB4gXbZmeetPDDqypH48c=s512" alt="Intranet - ThoughtWorks" src="https://lh3.googleusercontent.com/pUwhwsBUkHUa0-8N-iIuWxNL6cqOqXk2nwmuLPDcPv6COGL_62iVMYKubtzc9C_LB4gXbZmeetPDDqypH48c=s512"></img>
+          <img alt="Intranet - ThoughtWorks" src={logo}></img>
           
         </Link>
       </h1>
+
+      <div className={styles[`header__settings__menu`]}>
+      {isPublisher() &&
+            <Link to="/app/publish">
+              <img  className={styles[`header__link__publish__menu`]} src={publiscontent}/>
+            </Link>
+       }
+       {isAdmin() &&
+            <Link to="/app/admin">
+              <img  className={styles[`header__link__admin__menu`]} src={adminicon}/>
+            </Link>
+       }
+      </div>
+
       <Status /> 
     </div>
     <nav role="main" className={styles[`header__nav`]}>  
